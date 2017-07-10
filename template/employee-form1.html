@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+{% load static %}
+{% block index7 %}
+
+<head>
+<style type="text/css">
+
+
+#id_Name,#id_Adhaar,#id_Licence_Number,#id_RC_Card_No,#id_Mobile_No,#id_Current_Address,#id_Permanent_Address,#id_Father_spouse_Name,#id_Address,#id_Employee_Id,#id_Hub,#id_Date_of_Joining,#id_Role
+{
+    color:black;
+}
+
+</style>
+</head>
+<form name="form" id="id-personal-data-form" method="POST">{% csrf_token %}
+<center><h1><b><u>DCART Logistics PVT LTD!<br></h1><h2><b>New Employee Detail Form</b></u></h2></b><br>
+
+
+{{ form1|crispy }}
+{%buttons%}
+<br><br>
+<button type="submit"  style=" background-color: Transparent;" value="custblog">
+
+<strong>Submit</strong>
+</button>
+
+{%endbuttons%}
+
+
+
+</form>
+<div style="height: 10px;"></div>
+
+{% endblock %}
+    

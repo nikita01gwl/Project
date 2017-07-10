@@ -1,0 +1,22 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+<html>
+
+    <body background="{% static "abc.jpg"%}"style="background-size:100%;">
+       
+       
+        <center><h1><strong><u><font color="black">Hello world</font></u></strong></h1></center>
+       
+        <h2><br><br>
+            <div><center><h2><a href="{%url 'app.views.riderinfo'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>ADD RIDERS</button></a></div></center>
+
+            <div><center><h2><a href="{%url 'app.views.send_sms'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>SEND MESSAGE TO RIDERS</button></a></div></center>
+
+            <div><center><h2><a href="{%url 'app.views.send_sms2'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>SEND MESSAGE TO ADMINS</button></a></div></center>
+
+        </h2>
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+{% load static %}
+{% block index7 %}
+
+
+<form name="form" method="POST">{% csrf_token %}
+<b><center><h1><u>DCART Logistics PVT LTD!<br>New Employee Detail Form</u></h1></center></b><br>
+{{ form1|crispy }}
+{%buttons%}
+<br><br>
+<button type="submit" class="btn btn-primary"value="custblog">
+<strong>Submit</strong>
+</button>
+<br>
+{%endbuttons%}
+</form>
+{%buttons%}
+<button type="submit" class="btn btn-primary"value="custblog">
+
+
+<strong><a href="{%url 'emp:empp'%}">GENERATE PDF</a></strong>
+</button>
+{%endbuttons%}
+
+
+<div style="height: 100px;"></div>
+{% endblock %}

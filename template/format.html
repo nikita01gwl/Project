@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+{% load static %}
+{% block index10 %}
+
+<center>
+{%buttons%}
+<br><br>
+<a href="{%url 'emp:emp'%}"><button type="submit"  style=" background-color: Transparent;height:100px;width: 300px;margin-top: 50px;" value="custblog">
+
+<strong>EMPLOYEE FORM</strong>
+</button>
+
+{%endbuttons%}
+</a>
+<br><br><br>
+{%buttons%}
+<a href="{%url 'emp:empp'%}"><button type="submit" style=" background-color: Transparent;height:100px;width: 300px;"  value="custblog">
+
+
+<strong>GENERATE PDF</strong>
+</button>
+{%endbuttons%}
+</a>
+</center>
+<div style="height:400px;"></div>
+{% endblock %}
+    

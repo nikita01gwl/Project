@@ -1,0 +1,122 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SENDFAST - Home</title>
+    <meta name="description" content="Your Description Here">
+    <meta name="keywords" content="bootstrap themes, portfolio, responsive theme">
+    <meta name="author" content="ThemeForces.Com">
+    
+    <!-- Favicons
+    ================================================== -->
+<!--     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}"> -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+  </head>
+  
+  <body>
+    <div id="tf-home">
+        <div class="overlay">
+            <div id="sticky-anchor"></div>
+            <nav id="tf-menu" class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a  class="navbar-brand logo" href="{%url 'app.views.hello'%}">HOME</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                        
+                        <li ><a href="{%url 'app.views.riderinfo'%}">ADD RIDERS</a></li>
+                        <li ><a href="{%url 'app.views.send_sms'%}">SEND MESSAGE</a></li>
+
+                        <li><a href="{%url 'payslips.views.load_data'%}">PAYSLIPS</a></li>
+                        <li><a href="{%url 'app.views.empl'%}">EMPLOYEE FORM</a></li>
+                        
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        {% block index1 %} 
+        {% endblock %}
+
+        {% block index2 %} 
+        {% endblock %}
+
+        {% block index3 %} 
+        {% endblock %}
+
+        {% block index4 %} 
+        {% endblock %}
+
+        {% block index5 %} 
+        {% endblock %}
+
+        {% block index6 %} 
+        {% endblock %}
+
+        {% block index7 %} 
+        {% endblock %}
+
+        {% block index8 %} 
+        {% endblock %}
+
+        {% block index9 %} 
+        {% endblock %}
+
+        {% block index10 %} 
+        {% endblock %}
+
+        </div>
+    </div>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>

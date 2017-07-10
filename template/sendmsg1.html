@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+{% load static %}
+
+{% block index8 %}
+<head>
+<style type="text/css">
+#id_message
+{
+    color:black;
+}
+</style>
+</head>
+       
+    
+        <form name="form"method="POST">{% csrf_token %}
+            <b><center><h1>Send message to admins!</h1></b><br><br><br><br>
+           
+           
+           
+            {{ form5|crispy }}
+                    {%buttons%}
+                    <br><br>
+                    <button type="submit" style="background-color: Transparent;" value="cust">
+                        
+                        <strong>Submit</strong>
+                    </button>
+                    
+
+                    
+            {%endbuttons%}
+        </form>
+        <div style="height: 125px;"></div>
+
+        {% endblock %}
+
+   

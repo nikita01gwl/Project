@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+
+{% load crispy_forms_tags %}
+{%load bootstrap3%}
+{%bootstrap_css%}
+{%bootstrap_javascript%}
+{%bootstrap_messages%}
+{% load static %}
+
+{% block index4 %}
+
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#id_Select_All_Zones').change(function(){
+    if(this.checked)
+         $('#Zones').fadeOut('fast');
+        //$('#id_abc').fadeOut('fast');
+    else
+         $('#Zones').fadeIn('fast');
+
+        //$('#id_abc').fadeIn('fast');
+});
+});
+
+</script>
+</script>
+<style type="text/css">
+    
+.borderless td, .borderless th .borderless tr 
+{
+    border: none;
+}
+#id_Zone,#id_message
+{
+	color:black;
+}
+</style>
+</head>
+
+
+
+<table class="borderless">
+<tr><td style="width:600px;">
+{%buttons%}
+
+<button class="btn btn-link" value="cust">
+
+<strong><a href="{%url 'app.views.send_sms2'%}" style="color:#C5C5C5;font-size: 20px;margin-left: 150px;"> Send Message To Admins </a></strong>
+</button>
+{%endbuttons%}
+</td><td style="border-left: 1px solid white; padding: 5px;"></td>
+
+<td>
+
+<form name="form" method="POST" style="color:#C5C5C5;margin-left: 100px;">{% csrf_token %}
+<b><center><h3>Send Message To Riders</h3></b><br><br><br><br>
+
+
+
+
+{% for field in form4 %}
+{% if field.name == 'Zone' %}
+<div class="fieldWrapper1" id= "Zones">
+{% else %}
+<div class="fieldWrapper">
+{% endif %} 
+{{ field.errors }}
+{{ field.label_tag }} {{ field }}
+</div>
+<br>
+{% endfor %}
+
+{%buttons%}
+<br><br>
+<button style="background-color: Transparent;" value="cust">
+
+<strong>Send</strong>
+</button>
+{%endbuttons%}
+</form>
+
+</td></tr></table>
+<div style="height: 70px;"></div>
+
+{% endblock %}

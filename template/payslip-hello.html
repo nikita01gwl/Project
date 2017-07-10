@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block index6 %}
+<center><h2 style="margin-left: -100px;margin-top: 80px;"><u>GENERATE PAYSLIPS</u></h2>
+    <form action=" " method="post" enctype="multipart/form-data" style="margin-top: 100px;margin-left: 50px;">{% csrf_token %}
+    
+        <input type="file" name="csv_file" /><br/>
+        <input style="margin-left:-200px;background-color: Transparent;" type="submit" value="Upload" />
+   </center>
+    </form>
+    <div style="height: 275px;">
+    </div>
+{% endblock %}

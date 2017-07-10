@@ -1,0 +1,28 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+
+<html>
+<head>
+
+
+    <body background="{% static "01.jpg"%}" style="background-size:100%;opacity=1;" >
+       
+       
+        
+       	<div class="container">
+       	<img src="{% static "myapp/mno.jpg" %}" height="90" width="150" >
+       	
+       	</div>
+        <h2><br><br>
+            <div><center><h2><a href="{%url 'app.views.riderinfo'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>ADD RIDERS</button></a></div></center>
+
+            <div><center><h2><a href="{%url 'app.views.send_sms'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>SEND MESSAGE TO RIDERS</button></a></div></center>
+
+            <div><center><h2><a href="{%url 'app.views.send_sms2'%}"><button style="text-decoration:none;color:inherit;height:70px;width:200px"><h3><b>SEND MESSAGE TO ADMINS</button></a></div></center>
+
+        </h2>
+
+    </body>
+</html>
